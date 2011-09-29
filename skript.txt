@@ -1,0 +1,61 @@
+Teil 1. Grundlagen der Public-Key-Kryptographie
+
+Seit Langem verwenden Menschen Verschlüsselungsverfahren, um Nachrichten abhörsicher zu übertragen.
+Beispiel: Cäsar-Chiffre
+Hier ist 3 der Schlüssel, mit dem Nachrichten ver- und entschlüsselt werden.
+Frage: Wie kann man das knacken? (Buchstabenhäufigkeiten)
+
+Gleicher Schlüssel ver- und entschlüsselt: symmetrisch
+Quadratisch viele Schlüssel, Problem der Schlüsselübergabe
+Alternative: Public-Key-Verfahren. Öffentlicher Schlüssel ver-, geheimer Schlüssel entschlüsselt.
+
+Beispiel RSA
+So schwierig wie Primfaktorzerlegung von n
+
+Warum Privatsphäre?
+Privacy: The power to selectively reveal oneself to the world
+Anonyme Meinungsäußerung schützt vor Repressionen
+Benutzergenerierte Daten werden gesammelt u. vermarktet
+
+In der realen Welt: Oft Anonymität Standard (Bargeld…)
+Viele Protokolle übertragen nach wie vor standardmäßig unverschlüsselt
+(HTTP, E-Mail, …)
+Cypherpunk Manifesto: Entwickeln von Software, in der Privatsphäre Standard ist, auf Basis kryptographischer Methoden
+
+Aktuell:
+Vorratsdatenspeicherung, Bundestrojaner, Zensurgesetze, Klarnamenspflicht
+CDU/CSU-Fraktion Positionspapier: „anonyme Teilhabe am politischen Meinungs- und Willensbildungsprozess“
+
+Interessante Projekte:
+Freenet
+Bitcoin
+Off-the-record-Verschlüsselung
+
+Teil 3. TOR
+
+Geschichte:
+US Naval Research Laboratory, EFF
+heute: Nonprofit
+
+Ziel:
+Herstellung von Kommunikationsanonymität
+(Verschleiern: Wer kommuniziert mit wem?)
+Umgehen von Zensurschranken
+Bereitstellen von Hidden Services
+Fokus: Kommunikationsanonymität
+
+Grafik: Netzwerkstruktur / Circuits
+
+Grafik: TLS, Circuits, Streams
+
+Beschreibung: Circuit-Aufbau
+Grafik Create Circuit
+Schlüsselpaar
+
+Grafik Extend Circuit
+
+Grafik Relay Traffic
+
+Probleme:
+Software kann identifizierende Daten senden
+Durch mehrere Streams auf einem Circuit Identifizierung anderer Streams möglich
