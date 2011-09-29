@@ -12,7 +12,14 @@ Alternative: Public-Key-Verfahren. Öffentlicher Schlüssel ver-, geheimer Schl�
 Beispiel RSA
 So schwierig wie Primfaktorzerlegung von n
 
-Warum Privatsphäre?
+Teil 2. Privatsphäre unter Beschuss
+
+Warum verschlüsseln?
+Beispiel: Google Mail
+Beispiel: Staatliche Überwachung
+
+Privatsphäre ist nicht nur verschlüsselung:
+Anonymität
 Privacy: The power to selectively reveal oneself to the world
 Anonyme Meinungsäußerung schützt vor Repressionen
 Benutzergenerierte Daten werden gesammelt u. vermarktet
