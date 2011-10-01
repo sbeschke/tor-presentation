@@ -12,6 +12,15 @@
 \date{01. 10. 2011}
 \begin{document}
 
+\AtBeginSection[]
+{
+	\begin{frame}
+		\begin{center}
+		\Large{\insertsection}
+		\end{center}
+	\end{frame}
+}
+
 \begin{frame}
 \titlepage
 \end{frame}
@@ -23,7 +32,6 @@
 \end{frame}
 
 \section{Einführung in die Public-Key-Kryptographie}
-\subsection{Geheimschrift}
 
 \begin{frame}
 \frametitle{Eine einfache Chiffre}
@@ -51,31 +59,25 @@
 	
 	\includegraphics[width=0.9\textwidth]{images/symmetric.pdf}\\
 
-	\small{Verschlüsselung und Entschlüsselung mit gleichem Schlüssel}
-
 	\(\frac{n(n-1)}{2}\) Schlüssel
 
 \pause
 \column{0.5\textwidth}
 	\textbf{Public-Key-Verfahren:}
 
-	\includegraphics[width=0.9\textwidth]{images/asymmetric.pdf}\\
-
-	\small{Verschlüsselung mit öffentlichem Schlüssel; Entschlüsselung mit privatem Schlüssel}
+	\includegraphics[width=0.9\textwidth]{images/asymmetric2.pdf}\\
 
 	\(2n\) Schlüssel
 
 \end{columns}
 \end{frame}
 
-\subsection{Das RSA-Verfahren}
-
 \begin{frame}
 \frametitle{Das RSA-Verfahren}
 
 	\begin{itemize}
 		\item RSA ist eines der ältesten Public-Key-Verfahren (1978)
-		\item Auch heute noch ein Standard-Verfahren
+		tem Auch heute noch ein Standard-Verfahren
 		\item Basiert auf der Modulo-Rechnung und dem Satz von Euler
 		\item Deshalb jetzt ein wenig Mathe\dots
 	\end{itemize}
@@ -105,7 +107,7 @@
 
 \pause	\begin{theorem}[Der Satz von Euler]
 		Seien \(a\) und \(n\) teilerfremd.
-		Dann gilt \(a^{\varphi(n)} \equiv 1 \ (\text{mod}\ n)\)
+		Dann gilt \(a^{\varphi(n)} \equiv 1 \ (\textnormal{mod}\ n)\)
 	\end{theorem}
 \end{itemize}
 \end{frame}
@@ -115,7 +117,7 @@
 
 	\begin{theorem}[Der Satz von Euler]
 		Seien \(a\) und \(n\) teilerfremd.
-		Dann gilt \(a^{\varphi(n)} \equiv 1 \ (\text{mod}\ n)\)
+		Dann gilt \(a^{\varphi(n)} \equiv 1 \ (\textnormal{mod}\ n)\)
 	\end{theorem}
 
 	\begin{itemize}
@@ -123,28 +125,32 @@
 		\item Angenommen, wir haben \(e,d\) mit \(ed = k \cdot \varphi(n) + 1\)
 \pause		\item Sei \(m\) eine Nachricht.
 		\item \(c \equiv m^e \ (\text{mod}\ n)\) ist dann die verschlüsselte Nachricht.
-\pause		\item Kennt man \(d\), kann man sie entschlüsseln: \(c^d \equiv m^{ed} \equiv m^{k \cdot \varphi(n) + 1} \equiv m \cdot m^{k \cdot \varphi(n)} \equiv m \ (\text{mod}\ n)\)
+\pause		\item Kennt man \(d\), kann man sie entschlüsseln: \(c^d \equiv m^{ed} \equiv m^{k \cdot \varphi(n) + 1} \equiv m \cdot m^{k \cdot \varphi(n)} \equiv m \ (\textnormal{mod}\ n)\)
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{RSA-Verschlüsselung}
 
+	\begin{center}
+	\includegraphics[height=0.8\textheight]{images/rsa.pdf}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sicherheit von RSA}
+
 \begin{itemize}
-	\item \(n, e\) werden als öffentlicher Schlüssel veröffentlicht.
-	\item \(p, q, d\) werden geheim gehalten.
-	\item Jeder kann mit \(c \equiv m^e\ (\text{mod}\ n)\) verschlüsseln.
-	\item Nur der Inhaber des geheimen Schlüssels kann mit \(m \equiv c^d \ (\text{mod}\ n)\) entschlüsseln.
-\pause	\item Ein Angreifer könnte \(\log_e c\) berechnen.
+	\item Ein Angreifer könnte \(\log_e c\) berechnen.
 	\begin{itemize}
-		\item Das ist aber auf Restklassenringen sehr schwierig.
+	\item Das ist bei Modulorechnung sehr schwierig.
 	\end{itemize}
 \pause	\item Oder er könnte versuchen, \(d\) zu bestimmen.
 	\begin{itemize}
-		\item Der Knackpunkt: Zur Bestimmung von \(d\) braucht man \(\varphi(n)\)
-		\item Leicht zu bestimmen, wenn man \(p,q\) kennt: \(\varphi(n)=(p-1)(q-1)\).
-		\item Sonst aber sehr schwer zu bestimmen.
-		\item RSA zu knacken, ist daher so schwer, wie die Primfaktorzerlegung von \(n\).
+	\item Der Knackpunkt: Zur Bestimmung von \(d\) braucht man \(\varphi(n)\)
+	\item Leicht zu bestimmen, wenn man \(p,q\) kennt: \(\varphi(n)=(p-1)(q-1)\).
+	\item Sonst aber sehr schwer zu bestimmen.
+	\item \(d\) zu bestimmen, ist daher so schwer, wie die Primfaktorzerlegung von \(n\).
 	\end{itemize}
 \end{itemize}
 \end{frame}
@@ -156,15 +162,19 @@
 
 \begin{itemize}
 	\item Kryptographie: Metier von Geheimdiensten und Geheimniskrämern?
-	\item Nicht im Informationszeitalter!\\Zum Beispiel\dots
+	\item Nicht im Informationszeitalter!
 \end{itemize}
 \begin{columns}
 
 \column{0.5\textwidth}
-\pause	\includegraphics[height=0.2\textheight]{images/surveillancecamera.pdf}
+	\begin{center}
+	\includegraphics[height=0.4\textheight]{images/surveillancecamera.pdf}
+	\end{center}
 
 \column{0.5\textwidth}
-\pause	\includegraphics[height=0.2\textheight]{images/fbgoogle.png}
+	\begin{center}
+	\includegraphics[height=0.3\textheight]{images/fbgoogle.png}
+	\end{center}
 
 \end{columns}
 \end{frame}
@@ -241,7 +251,7 @@
 		\item Eine offene Gesellschaft braucht Privatsphäre
 		\item Regierungen und Konzerne werden Privatsphäre nicht freiwillig schaffen
 		\item Kryptographie ist das Mittel zur Wahrung der Privatsphäre
-		\item Cypherpunks gießen diese Mittel in Software
+		\item Cypherpunks machen daraus Software
 	\end{itemize}
 
 	\begin{quote}
@@ -263,7 +273,63 @@
 \section{Die Anonymisierungssoftware Tor}
 
 \begin{frame}
+\frametitle{Überblick über Tor}
 
+\begin{itemize}
+	\item Das Tor-Projekt…
+	\begin{itemize}
+		\item Entstanden als Weiterentwicklung des “Onion Routing”-Projekts des US Naval Research Laboratory
+		\item Später finanziert durch die Electronic Frontier Foundation
+		\item Seit 2006 ist das “Tor Project” eine Nonprofit-Organisation in den USA
+	\end{itemize}
+
+	\item Ziele von Tor
+	\begin{itemize}
+		\item Verschleiern: Wer kommuniziert mit wem?
+		\item Umgehen von Zensurschranken
+		\item Anonymes Bereitstellen von Informationen
+	\end{itemize}
+\end{itemize}
+	
+\end{frame}
+
+\begin{frame}
+\frametitle{Netzwerkstruktur von Tor}
+
+\includegraphics[width=\textwidth]{images/circuit.pdf}
+\end{frame}
+
+\begin{frame}
+\frametitle{Aufbau eines Circuit}
+
+\includegraphics<1>[width=\textwidth]{images/circuit_create.pdf}
+\includegraphics<2>[width=\textwidth]{images/circuit_extend.pdf}
+\end{frame}
+
+\begin{frame}
+\frametitle{Weiterleiten von Daten}
+
+\includegraphics<1>[width=\textwidth]{images/circuit_relay.pdf}
+\includegraphics<2>[width=\textwidth]{images/circuit_response.pdf}
+\end{frame}
+
+\begin{frame}
+\frametitle{Anonymisierung}
+
+\begin{itemize}
+	\item Niemand erfährt, mit wem der Sender kommuniziert
+	\begin{itemize}
+		\item Der Server denkt, der Traffic käme vom Exit Node
+		\item Jeder Knoten im Circuit kennt nur seine Nachbarn
+		\item Nur der Exit Node kann sehen, wohin das Datenpaket geht
+	\end{itemize}
+	\item Aber:
+	\begin{itemize}
+		\item Der Exit Node sieht den Datenverkehr im Klartext
+		\item Daher ist Ende-zu-Ende-Verschlüsselung zum Server sinnvoll
+		\item Trotzdem kann das Datenpaket identifizierende Daten beinhalten
+	\end{itemize}
+\end{itemize}
 \end{frame}
 
 \end{document}
