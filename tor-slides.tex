@@ -31,7 +31,7 @@
 	\tableofcontents
 \end{frame}
 
-\section{Einführung in die Public-Key-Kryptographie}
+\section{Einführung in die Kryptographie}
 
 \begin{frame}
 \frametitle{Eine einfache Chiffre}
@@ -59,7 +59,7 @@
 	
 	\includegraphics[width=0.9\textwidth]{images/symmetric.pdf}\\
 
-	\(\frac{n(n-1)}{2}\) Schlüssel
+	\(\Rightarrow \frac{n(n-1)}{2}\) Schlüssel
 
 \pause
 \column{0.5\textwidth}
@@ -67,9 +67,23 @@
 
 	\includegraphics[width=0.9\textwidth]{images/asymmetric2.pdf}\\
 
-	\(2n\) Schlüssel
+	\(\Rightarrow 2n\) Schlüssel
 
 \end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hybride Verfahren}
+
+\begin{itemize}
+	\item Public-Key-Kryptographie ist aufwändig zu berechnen
+	\item Daher oft hybrider Ansatz:
+	\begin{itemize}
+		\item Austausch eines Schlüssels mittels Public-Key-Kryptographie
+		\item Anschließend symmetrische Verschlüsselung mit diesem Schlüssel
+		\item Der Schlüssel ist dann in der Regel kurzlebig
+	\end{itemize}
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -77,7 +91,7 @@
 
 	\begin{itemize}
 		\item RSA ist eines der ältesten Public-Key-Verfahren (1978)
-		tem Auch heute noch ein Standard-Verfahren
+		\item Auch heute noch ein Standard-Verfahren
 		\item Basiert auf der Modulo-Rechnung und dem Satz von Euler
 		\item Deshalb jetzt ein wenig Mathe\dots
 	\end{itemize}
@@ -141,7 +155,7 @@
 \frametitle{Sicherheit von RSA}
 
 \begin{itemize}
-	\item Ein Angreifer könnte \(\log_e c\) berechnen.
+	\item Ein Angreifer könnte \(\log_e m^e\) berechnen.
 	\begin{itemize}
 	\item Das ist bei Modulorechnung sehr schwierig.
 	\end{itemize}
@@ -150,7 +164,7 @@
 	\item Der Knackpunkt: Zur Bestimmung von \(d\) braucht man \(\varphi(n)\)
 	\item Leicht zu bestimmen, wenn man \(p,q\) kennt: \(\varphi(n)=(p-1)(q-1)\).
 	\item Sonst aber sehr schwer zu bestimmen.
-	\item \(d\) zu bestimmen, ist daher so schwer, wie die Primfaktorzerlegung von \(n\).
+	\item[\(\Rightarrow\)] \(d\) zu bestimmen, ist so schwer, wie die Primfaktorzerlegung von \(n\).
 	\end{itemize}
 \end{itemize}
 \end{frame}
@@ -251,7 +265,7 @@
 		\item Eine offene Gesellschaft braucht Privatsphäre
 		\item Regierungen und Konzerne werden Privatsphäre nicht freiwillig schaffen
 		\item Kryptographie ist das Mittel zur Wahrung der Privatsphäre
-		\item Cypherpunks machen daraus Software
+		\item Cypherpunks machen entsprechende Software
 	\end{itemize}
 
 	\begin{quote}
@@ -319,9 +333,9 @@
 \begin{itemize}
 	\item Niemand erfährt, mit wem der Sender kommuniziert
 	\begin{itemize}
-		\item Der Server denkt, der Traffic käme vom Exit Node
+		\item Der Server denkt, die Anfrage käme vom Exit Node
 		\item Jeder Knoten im Circuit kennt nur seine Nachbarn
-		\item Nur der Exit Node kann sehen, wohin das Datenpaket geht
+		\item Nur der Exit Node kann das Ziel des Datenpakets sehen
 	\end{itemize}
 	\item Aber:
 	\begin{itemize}
@@ -341,7 +355,7 @@
 	\item Der Schutz der Privatsphäre ist wichtig
 	\item Geschickter Einsatz von Kryptographie kann hierbei helfen
 	\item Es ist schwer, ein wasserdichtes Kryptosystem zu bauen
-	\item Selbst ein wasserdichtes System kann durch Probleme auf anderen Ebenen außer Kraft gesetzt werden
+	\item Selbst ein wasserdichtes System kann durch Fehler auf anderen Ebenen außer Kraft gesetzt werden
 	\item Aber: Die Grundprinzipien sind einfach zu verstehen – Jede/r kann mitdenken
 \end{itemize}
 \end{frame}

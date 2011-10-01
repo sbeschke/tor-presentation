@@ -156,10 +156,10 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="1280"
-     inkscape:window-height="1002"
-     inkscape:window-x="1280"
-     inkscape:window-y="0"
+     inkscape:window-width="1024"
+     inkscape:window-height="720"
+     inkscape:window-x="0"
+     inkscape:window-y="26"
      inkscape:window-maximized="1"
      fit-margin-top="10"
      fit-margin-left="10"
@@ -181,7 +181,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -368,10 +368,10 @@
          id="tspan4903"
          x="110.5"
          y="454.36218">m<tspan
-   style="font-size:65.00091553%;baseline-shift:sub"
-   id="tspan5820">1</tspan><tspan
-   style="font-size:65.00091553%;baseline-shift:super"
-   id="tspan5818" /></tspan></text>
+   id="tspan5820"
+   style="font-size:65.00091553%;baseline-shift:sub">1</tspan><tspan
+   id="tspan5818"
+   style="font-size:65.00091553%;baseline-shift:super" /></tspan></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect4909"
@@ -416,5 +416,23 @@
          y="469.95236">e<tspan
    style="font-size:6.57836294px;baseline-shift:sub"
    id="tspan5842">C</tspan></tspan></text>
+    <text
+       id="text3063"
+       y="454.36218"
+       x="138.5"
+       xml:space="preserve"><tspan
+         y="454.36218"
+         x="138.5"
+         id="tspan3065"
+         sodipodi:role="line">mod n</tspan></text>
+    <text
+       xml:space="preserve"
+       x="138.5"
+       y="476.36218"
+       id="text3071"><tspan
+         sodipodi:role="line"
+         id="tspan3073"
+         x="138.5"
+         y="476.36218">mod n</tspan></text>
   </g>
 </svg>

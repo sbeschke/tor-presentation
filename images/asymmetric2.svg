@@ -156,10 +156,10 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="1280"
-     inkscape:window-height="1002"
-     inkscape:window-x="1280"
-     inkscape:window-y="0"
+     inkscape:window-width="1024"
+     inkscape:window-height="720"
+     inkscape:window-x="0"
+     inkscape:window-y="26"
      inkscape:window-maximized="1"
      fit-margin-top="10"
      fit-margin-left="10"
@@ -181,7 +181,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -192,7 +192,7 @@
      transform="translate(-35.5,-366.50503)">
     <path
        transform="matrix(0.71428571,0,0,0.71428571,11.560551,410.77626)"
-       d="m 105,60.5 a 27.5,27.5 0 1 1 -55,0 27.5,27.5 0 1 1 55,0 z"
+       d="M 105,60.5 C 105,75.687831 92.687831,88 77.5,88 62.312169,88 50,75.687831 50,60.5 50,45.312169 62.312169,33 77.5,33 92.687831,33 105,45.312169 105,60.5 z"
        sodipodi:ry="27.5"
        sodipodi:rx="27.5"
        sodipodi:cy="60.5"
@@ -219,7 +219,7 @@
        sodipodi:cy="60.5"
        sodipodi:rx="27.5"
        sodipodi:ry="27.5"
-       d="m 105,60.5 a 27.5,27.5 0 1 1 -55,0 27.5,27.5 0 1 1 55,0 z"
+       d="M 105,60.5 C 105,75.687831 92.687831,88 77.5,88 62.312169,88 50,75.687831 50,60.5 50,45.312169 62.312169,33 77.5,33 92.687831,33 105,45.312169 105,60.5 z"
        transform="matrix(0.71428571,0,0,0.71428571,11.56055,355.77626)" />
     <text
        xml:space="preserve"
@@ -234,7 +234,7 @@
          y="409.36218">A</tspan></text>
     <path
        transform="matrix(0.71428571,0,0,0.71428571,11.560551,465.77626)"
-       d="m 105,60.5 a 27.5,27.5 0 1 1 -55,0 27.5,27.5 0 1 1 55,0 z"
+       d="M 105,60.5 C 105,75.687831 92.687831,88 77.5,88 62.312169,88 50,75.687831 50,60.5 50,45.312169 62.312169,33 77.5,33 92.687831,33 105,45.312169 105,60.5 z"
        sodipodi:ry="27.5"
        sodipodi:rx="27.5"
        sodipodi:cy="60.5"
@@ -337,7 +337,7 @@
    style="fill:#d4aa00"
    id="tspan3228">C</tspan> -&gt; <tspan
    style="fill:#003380"
-   id="tspan3232">B<tspan
+   id="tspan3052">P<tspan
    style="font-size:65.00091553%;baseline-shift:sub"
    id="tspan3240">C</tspan></tspan></tspan></text>
     <path
