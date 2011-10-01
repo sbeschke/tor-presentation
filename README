@@ -1,0 +1,7 @@
+CC-BY-SA 2.0
+
+Diesen Vortrag habe ich am 01. 10. 2011 auf dem Workshop-Wochenende des juFORUM e.V. in Tübingen gehalten.
+
+Der Vortrag führt kurz in die Public-Key-Kryptographie am Beispiel des RSA-Verfahrens ein. Anschließend werden anhand des Cypherpunk Manifesto einige Aspekte des Begriffs Privatsphäre beleuchtet. Im dritten Teil wird die Funktionsweise des Tor-Netzwerks kurz erläutert.
+
+Die Folien sind mit dem LaTeX und dem beamer-Paket erstellt worden; die Grafiken im images-Ordner sind zum größten Teil mit Inkscape selbst erstellt, mit Ausnahme von surveillance_camera.svg (maxim2 auf openclipart.org) und den Facebook/Google-Logos.
